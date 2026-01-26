@@ -1,0 +1,134 @@
+<!--
+ Copyright (c) 2026 s0high
+ https://github.com/s0h2x/LossOfControl
+    
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+-->
+
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+	<Frame name="LossOfControlFrameTemplate" frameStrata="MEDIUM" toplevel="true" parent="UIParent" hidden="true" virtual="true">
+		<Size x="256" y="58"/>
+		<Anchors>
+			<Anchor point="CENTER" x="0" y="0"/>
+		</Anchors>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture file="Interface\AddOns\LossOfControl\Resources\Cooldown\LoC-ShadowBG" parentKey="blackBg">
+					<Size x="256" y="58"/>
+					<Anchors>
+						<Anchor point="CENTER" x="0" y="0"/>
+					</Anchors>
+					<Color r="1.0" g="1.0" b="1.0" a="0.6"/>
+				</Texture>
+
+				<Texture file="Interface\AddOns\LossOfControl\Resources\Cooldown\Loc-RedLine" parentKey="RedLineTop">
+					<Size x="236" y="27"/>
+					<Anchors>
+						<Anchor point="BOTTOM" relativePoint="TOP" x="0" y="0"/>
+					</Anchors>
+					<Animations>
+						<AnimationGroup parentKey="Anim">
+							<Scale duration="0.01" scaleX="0.1" scaleY="1.0" order="1"/>
+							<Scale duration="0.1" scaleX="14.0" scaleY="1.0" order="2" smoothing="OUT"/>
+							<Scale duration="0.1" scaleX="0.71" scaleY="1.0" order="3" smoothing="IN"/>
+						</AnimationGroup>
+					</Animations>
+				</Texture>
+
+				<Texture file="Interface\AddOns\LossOfControl\Resources\Cooldown\Loc-RedLine" parentKey="RedLineBottom">
+					<Size x="236" y="27"/>
+					<Anchors>
+						<Anchor point="TOP" relativePoint="BOTTOM" x="0" y="0"/>
+					</Anchors>
+					<TexCoords left="0" right="1" top="1" bottom="0"/>
+					<Animations>
+						<AnimationGroup parentKey="Anim">
+							<Scale duration="0.01" scaleX="0.1" scaleY="1.0" order="1"/>
+							<Scale duration="0.1" scaleX="14.0" scaleY="1.0" order="2" smoothing="OUT"/>
+							<Scale duration="0.1" scaleX="0.71" scaleY="1.0" order="3" smoothing="IN"/>
+						</AnimationGroup>
+					</Animations>
+				</Texture>
+			</Layer>
+
+			<Layer level="ARTWORK">
+				<Texture name="$parentIcon" parentKey="Icon">
+					<Size x="48" y="48"/>
+					<Anchors>
+						<Anchor point="CENTER" x="0" y="0"/>
+					</Anchors>
+					<Animations>
+						<AnimationGroup parentKey="Anim">
+							<Translation duration="0.1" offsetX="-20" offsetY="0" order="2" smoothing="OUT"/>
+							<Scale duration="0.1" scaleX="1.33" scaleY="1.33" order="2" smoothing="OUT"/>
+
+							<Translation duration="0.1" offsetX="20" offsetY="0" order="3" smoothing="IN"/>
+							<Scale duration="0.1" scaleX="0.75" scaleY="0.75" order="3" smoothing="IN"/>
+						</AnimationGroup>
+					</Animations>
+				</Texture>
+
+				<FontString inherits="MovieSubtitleFont" parentKey="AbilityName">
+					<Size x="0" y="20"/>
+					<Anchors>
+						<Anchor point="CENTER"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+
+		<Frames>
+			<Cooldown parentKey="Cooldown" hidden="true" hideCountdownNumbers="true" drawEdge="true" inherits="CooldownFrameTemplate">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentIcon" x="2" y="-2"/>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parentIcon" x="-2" y="2"/>
+				</Anchors>
+				<SwipeTexture>
+					<Color r="0.17" g="0" b="0" a="0.8"/>
+				</SwipeTexture>
+				<!-- <EdgeTexture file="Interface\AddOns\LossOfControl\Resources\Cooldown\UI-HUD-ActionBar-LoC"/> -->
+			</Cooldown>
+
+			<Frame parentKey="TimeLeft">
+				<Size x="200" y="20"/>
+				<Layers>
+					<Layer level="ARTWORK">
+						<FontString inherits="GameFontNormalHuge" parentKey="NumberText" name="$parentNumberText" justifyH="LEFT" text="">
+							<Size x="0" y="20"/>
+							<Anchors>
+								<Anchor point="LEFT"/>
+							</Anchors>
+							<Shadow>
+								<Offset>
+									<AbsDimension x="2" y="-2"/>
+								</Offset>
+								<Color r="0" g="0" b="0"/>
+							</Shadow>
+							<Color r="1" g="1" b="1"/>
+						</FontString>
+
+						<FontString inherits="GameFontNormalHuge" parentKey="SecondsText">
+							<Size x="0" y="20"/>
+							<Anchors>
+								<Anchor point="LEFT" relativeTo="$parentNumberText" relativePoint="RIGHT" x="4" y="0"/>
+								<!-- <Anchor point="LEFT" relativePoint="CENTER" x="-64" y="0"/> -->
+							</Anchors>
+							<Shadow>
+								<Offset>
+									<AbsDimension x="2" y="-2"/>
+								</Offset>
+								<Color r="0" g="0" b="0"/>
+							</Shadow>
+							<Color r="1" g="1" b="1"/>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+	</Frame>
+</Ui>
