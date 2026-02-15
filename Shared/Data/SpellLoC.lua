@@ -1210,6 +1210,7 @@ Engine.Data.AURA_CC = {
 	[36297] = "SILENCE", -- Silence
 	[37031] = "SILENCE", -- Silence
 	[37160] = "SILENCE", -- Silence
+	[38146] = "SILENCE", -- Arcane Lightning
 	[38491] = "SILENCE", -- Silence
 	[38913] = "SILENCE", -- Silence
 	[39052] = "SILENCE", -- Silence
@@ -1542,4 +1543,5 @@ Engine.Data.PRIORITY = {
 	ROOT      = 3,
 	DISARM    = 2,
 	SNARE     = 1,
+
 };
