@@ -1204,6 +1204,7 @@ Engine.Data.AURA_CC = {
 	[34087] = "SILENCE", -- Silence
 	[34088] = "SILENCE", -- Silence
 	[34089] = "SILENCE", -- Silence
+	[34490] = "SILENCE", -- Silencing Shot
 	[34922] = "SILENCE", -- Silence
 	[35892] = "SILENCE", -- Silence
 	[36022] = "SILENCE", -- Silence
@@ -1543,5 +1544,4 @@ Engine.Data.PRIORITY = {
 	ROOT      = 3,
 	DISARM    = 2,
 	SNARE     = 1,
-
 };
