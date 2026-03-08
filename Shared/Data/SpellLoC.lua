@@ -12,11 +12,11 @@
 local Engine = select(2, ...);
 
 
--- CC Auras: [spellID] = locType / ~1300
+-- CC Auras: [spellID] = locType (Mechanic)
 ----------------------------------------------------------------
 Engine.Data.AURA_CC = {
 	------------------------------------------------------------
-	-- CHARM
+	--# CHARM
 	------------------------------------------------------------
 	[260]   = "CHARM",  -- Charm
 	[605]   = "CHARM",  -- Mind Control
@@ -114,7 +114,7 @@ Engine.Data.AURA_CC = {
 	[67229] = "CHARM",  -- Incite Chaos
 
 	------------------------------------------------------------
-	-- DISORIENT
+	--# DISORIENT
 	------------------------------------------------------------
 	[2094]  = "DISORIENT", -- Blind
 	[9992]  = "DISORIENT", -- Dizzy
@@ -188,7 +188,7 @@ Engine.Data.AURA_CC = {
 	[74456] = "DISORIENT", -- Conflagration
 
 	------------------------------------------------------------
-	-- STUN
+	--# STUN
 	------------------------------------------------------------
 	[45]	= "STUN",   -- War Stomp
 	[56]	= "STUN",   -- Stun
@@ -738,7 +738,7 @@ Engine.Data.AURA_CC = {
 	[75510] = "STUN",   -- Emergency Recall
 
 	------------------------------------------------------------
-	-- FEAR
+	--# FEAR
 	------------------------------------------------------------
 	[351357] = "FEAR", -- Howl of Terror
 	[1513]  = "FEAR",  -- Scare Beast
@@ -873,8 +873,9 @@ Engine.Data.AURA_CC = {
 	[73070] = "FEAR",  -- Terrifying Roar
 
 	------------------------------------------------------------
-	-- HORROR
+	--# HORROR
 	------------------------------------------------------------
+	[27223] = "HORROR", -- Death Coil
 	[33130] = "HORROR", -- Death Coil
 	[34984] = "HORROR", -- Psychic Horror
 	[53438] = "HORROR", -- Death Coil
@@ -885,7 +886,7 @@ Engine.Data.AURA_CC = {
 	[72435] = "HORROR", -- Death Coil
 
 	------------------------------------------------------------
-	-- SLEEP
+	--# SLEEP
 	------------------------------------------------------------
 	[700]   = "SLEEP",  -- Sleep (Rank 1)
 	[1090]  = "SLEEP",  -- Sleep (Rank 2)
@@ -948,26 +949,26 @@ Engine.Data.AURA_CC = {
 	[66290] = "SLEEP",  -- Sleep
 
 	------------------------------------------------------------
-	-- INCAP
+	--# INCAP
 	------------------------------------------------------------
 	[1776]  = "INCAP",  -- Gouge
 	[12540] = "INCAP",  -- Gouge
-	[13327] = "INCAP",  -- Gouge
+	[13327] = "INCAP",  -- Reckless Charge
 	[13579] = "INCAP",  -- Gouge
 	[20066] = "INCAP",  -- Repentance
 	[24698] = "INCAP",  -- Gouge
-	[30980] = "INCAP",  -- Gouge
-	[32779] = "INCAP",  -- Gouge
+	[30980] = "INCAP",  -- Sap (Incapacitated)
+	[32779] = "INCAP",  -- Repentance
 	[34940] = "INCAP",  -- Gouge
 	[36862] = "INCAP",  -- Gouge
 	[38764] = "INCAP",  -- Gouge
 	[38863] = "INCAP",  -- Gouge
 	[52743] = "INCAP",  -- Head Smack
-	[66008] = "INCAP",  -- Gouge
-	[71988] = "INCAP",  -- Gouge
+	[66008] = "INCAP",  -- Repentance
+	[71988] = "INCAP",  -- Vile Fumes
 
 	------------------------------------------------------------
-	-- FREEZE
+	--# FREEZE
 	------------------------------------------------------------
 	[122]   = "FREEZE", -- Frost Nova
 	[3355]  = "FREEZE", -- Freezing Trap
@@ -993,10 +994,10 @@ Engine.Data.AURA_CC = {
 	[61058] = "FREEZE", -- Freezing Trap
 	[62468] = "FREEZE", -- Petrification
 	[66012] = "FREEZE", -- Freezing Trap
-	[72171] = "FREEZE", -- Frost Nova
+	[72171] = "FREEZE", -- Chains of Ice
 
 	------------------------------------------------------------
-	-- POLYMORPH
+	--# POLYMORPH
 	------------------------------------------------------------
 	[118]   = "POLYMORPH", -- Polymorph
 	[228]   = "POLYMORPH", -- Polymorph: Chicken
@@ -1099,58 +1100,57 @@ Engine.Data.AURA_CC = {
 	[75216] = "POLYMORPH", -- Polymorph
 
 	------------------------------------------------------------
-	-- BANISH
+	--# BANISH
 	------------------------------------------------------------
 	[710]   = "BANISH",  -- Banish
 	[8994]  = "BANISH",  -- Banish
-	[16045] = "BANISH",  -- Banish
-	[16451] = "BANISH",  -- Banish
+	[16045] = "BANISH",  -- Encage
+	[16451] = "BANISH",  -- Judge's Gavel
 	[18647] = "BANISH",  -- Banish (Rank 2)
 	[27565] = "BANISH",  -- Banish
 	[30231] = "BANISH",  -- Banish
-	[30940] = "BANISH",  -- Banish
-	[31797] = "BANISH",  -- Banish
-	[33786] = "BANISH",  -- Cyclone
+	[30940] = "BANISH",  -- Burning Nova
+	[31797] = "BANISH",  -- Banish Self
 	[35182] = "BANISH",  -- Banish
 	[37546] = "BANISH",  -- Banish
 	[38009] = "BANISH",  -- Banish
-	[38456] = "BANISH",  -- Banish
-	[38505] = "BANISH",  -- Banish
+	[38456] = "BANISH",  -- Banish Self
 	[38791] = "BANISH",  -- Banish
 	[39622] = "BANISH",  -- Banish
-	[40578] = "BANISH",  -- Banish
-	[43528] = "BANISH",  -- Banish
 	[44765] = "BANISH",  -- Banish
-	[60236] = "BANISH",  -- Banish
-	[61662] = "BANISH",  -- Banish
-	[62649] = "BANISH",  -- Banish
-	[65859] = "BANISH",  -- Banish
-	[69699] = "BANISH",  -- Banish
+	[62649] = "BANISH",  -- Stormbolt
 	[71298] = "BANISH",  -- Banish
 
 	------------------------------------------------------------
-	-- CYCLONE
+	--# CYCLONE
 	------------------------------------------------------------
 	[33786] = "CYCLONE", -- Cyclone
+	[65859] = "CYCLONE", -- Cyclone
+	[60236] = "CYCLONE", -- Cyclone
+	[61662] = "CYCLONE", -- Cyclone
+	[69699] = "CYCLONE", -- Cyclone
+	[40578] = "CYCLONE", -- Cyclone
+	[43528] = "CYCLONE", -- Cyclone
 
 	------------------------------------------------------------
-	-- SHACKLE
+	--# SHACKLE
 	------------------------------------------------------------
 	[9484]  = "SHACKLE", -- Shackle Undead (Rank 1)
 	[9485]  = "SHACKLE", -- Shackle Undead (Rank 2)
 	[10955] = "SHACKLE", -- Shackle Undead (Rank 3)
+	[38505] = "SHACKLE", -- Shackle
 	[40135] = "SHACKLE", -- Shackle Undead
 
 	------------------------------------------------------------
-	-- SAP (Ошеломление)
+	--# SAP
 	------------------------------------------------------------
-	[2070]  = "SAP",	 -- Sap (Rank 1)
-	[6770]  = "SAP",	 -- Sap (Rank 2)
-	[11297] = "SAP",	 -- Sap (Rank 3)
-	[51724] = "SAP",	 -- Sap (Rank 4)
+	[2070]  = "SAP", -- Sap (Rank 1)
+	[6770]  = "SAP", -- Sap (Rank 2)
+	[11297] = "SAP", -- Sap (Rank 3)
+	[51724] = "SAP", -- Sap (Rank 4)
 
 	------------------------------------------------------------
-	-- SILENCE
+	--# SILENCE
 	------------------------------------------------------------
 	[1330]  = "SILENCE", -- Garrote - Silence
 	[3589]  = "SILENCE", -- Silence
@@ -1237,7 +1237,7 @@ Engine.Data.AURA_CC = {
 	[48680] = "SILENCE", -- Silence
 
 	------------------------------------------------------------
-	-- DISARM
+	--# DISARM
 	------------------------------------------------------------
 	[676]   = "DISARM",  -- Disarm
 	[5259]  = "DISARM",  -- Disarm
@@ -1283,7 +1283,7 @@ Engine.Data.AURA_CC = {
 	[69892] = "DISARM",  -- Disarm
 
 	------------------------------------------------------------
-	-- ROOT
+	--# ROOT
 	------------------------------------------------------------
 	[113]   = "ROOT",   -- Chains of Ice
 	[339]   = "ROOT",   -- Entangling Roots (Rank 1)
@@ -1469,7 +1469,7 @@ Engine.Data.AURA_CC = {
 	[62930] = "ROOT",   -- Entangling Roots
 	[63861] = "ROOT",   -- Entangling Roots
 	[63912] = "ROOT",   -- Frost Nova
-	[64668] = "ROOT",   -- Entangling Roots
+	[64668] = "ROOT",   -- Magnetic Field
 	[64695] = "ROOT",   -- Earthgrab
 	[64803] = "ROOT",   -- Entangling Roots
 	[64804] = "ROOT",   -- Entangling Roots
@@ -1477,40 +1477,46 @@ Engine.Data.AURA_CC = {
 	[66070] = "ROOT",   -- Entangling Roots
 	[69571] = "ROOT",   -- Frost Nova
 	[71327] = "ROOT",   -- Web
-	[71929] = "ROOT",   -- Entangling Roots
-	[74413] = "ROOT",   -- Frost Nova
+	[71929] = "ROOT",   -- Frost Nova
 };
 
 
 -- Interrupt Lockouts: [spellID] = duration
 ----------------------------------------------------------------
 Engine.Data.INTERRUPT_LOCKOUT = {
-	[1766]   = 5,   -- Kick
-	[2139]   = 8,   -- Counterspell
-	[6552]   = 4,   -- Pummel
-	[19647]  = 6,   -- Spell Lock
-	[29443]  = 10,  -- Counterspell (Improved)
-	[32747]  = 3,   -- Interrupt
-	[47528]  = 4,   -- Mind Freeze
-	[57994]  = 2,   -- Wind Shear
-	[72]	 = 6,   -- Shield Bash
-	[19639]  = 5,   -- Pummel
-	[61381]  = 2,   -- Interrupt
-	[66335]  = 8,   -- Mistress' Kiss
+	------------------------------------------------------------
+	--# Player Spells
+	------------------------------------------------------------
+	[1766]  = 5,   -- Kick
+	[2139]  = 8,   -- Counterspell
+	[6552]  = 4,   -- Pummel
+	[19647] = 6,   -- Spell Lock
+	[29443] = 10,  -- Counterspell (Improved)
+	[32747] = 3,   -- Interrupt
+	[47528] = 4,   -- Mind Freeze
+	[57994] = 2,   -- Wind Shear
+	[72]	= 6,   -- Shield Bash
+	[19639] = 5,   -- Pummel
+	[61381] = 2,   -- Interrupt
+	[66335] = 8,   -- Mistress' Kiss
+	[19675] = 4,   -- Feral Charge
 
-	-- NPC Abilities
-	[29961]  = 10,  -- Counterspell
-	[32691]  = 6,   -- Spell Shock
-	[65790]  = 8,   -- Counterspell
-	[10887]  = 5,   -- Crowd Pummel (Rank 3)
-	[15122]  = 15,  -- Counterspell
-	[35039]  = 10,  -- Countercharge
-	[20537]  = 15,  -- Counterspell
-	[31596]  = 6,   -- Counterspell
-	[39076]  = 6,   -- Spell Shock
-	[31999]  = 15,  -- Counterspell
-	[37470]  = 3,   -- Counterspell
-	[51610]  = 4,   -- Counterspell
+	------------------------------------------------------------
+	--# NPC Abilities
+	------------------------------------------------------------
+	[29961] = 10,  -- Counterspell
+	[32691] = 6,   -- Spell Shock
+	[65790] = 8,   -- Counterspell
+	[10887] = 5,   -- Crowd Pummel (Rank 3)
+	[15122] = 15,  -- Counterspell
+	[35039] = 10,  -- Countercharge
+	[20537] = 15,  -- Counterspell
+	[31596] = 6,   -- Counterspell
+	[39076] = 6,   -- Spell Shock
+	[31999] = 15,  -- Counterspell
+	[37470] = 3,   -- Counterspell
+	[51610] = 4,   -- Counterspell
+	[11978] = 6,   -- Kick
 };
 
 
@@ -1535,4 +1541,5 @@ Engine.Data.PRIORITY = {
 	ROOT      = 3,
 	DISARM    = 2,
 	SNARE     = 1,
+
 };
