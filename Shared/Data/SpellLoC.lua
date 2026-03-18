@@ -1473,10 +1473,13 @@ Engine.Data.AURA_CC = {
 	[64695] = "ROOT",   -- Earthgrab
 	[64803] = "ROOT",   -- Entangling Roots
 	[64804] = "ROOT",   -- Entangling Roots
+	[65792] = "ROOT",   -- Frost Nova
 	[65857] = "ROOT",   -- Entangling Roots
 	[66070] = "ROOT",   -- Entangling Roots
 	[69571] = "ROOT",   -- Frost Nova
+	[71320] = "ROOT",   -- Frost Nova
 	[71327] = "ROOT",   -- Web
+	[71647] = "ROOT",   -- Ice Trap
 	[71929] = "ROOT",   -- Frost Nova
 };
 
