@@ -972,7 +972,6 @@ Engine.Data.AURA_CC = {
 	------------------------------------------------------------
 	--# FREEZE
 	------------------------------------------------------------
-	[122]   = "FREEZE", -- Frost Nova
 	[3355]  = "FREEZE", -- Freezing Trap
 	[10255] = "FREEZE", -- Petrification
 	[14308] = "FREEZE", -- Freezing Trap
@@ -1287,10 +1286,12 @@ Engine.Data.AURA_CC = {
 	------------------------------------------------------------
 	--# ROOT
 	------------------------------------------------------------
+	[122]   = "ROOT",   -- Frost Nova (Rank 1)
 	[113]   = "ROOT",   -- Chains of Ice
 	[339]   = "ROOT",   -- Entangling Roots (Rank 1)
 	[512]   = "ROOT",   -- Chains of Ice
 	[745]   = "ROOT",   -- Web
+	[865]   = "ROOT",   -- Frost Nova (Rank 2)
 	[1062]  = "ROOT",   -- Entangling Roots (Rank 2)
 	[3542]  = "ROOT",   -- Web
 	[4167]  = "ROOT",   -- Web
@@ -1300,6 +1301,7 @@ Engine.Data.AURA_CC = {
 	[5403]  = "ROOT",   -- Crash of Waves
 	[5424]  = "ROOT",   -- Web
 	[5567]  = "ROOT",   -- Miring Mud
+	[6131]  = "ROOT",   -- Frost Nova (Rank 3)
 	[6533]  = "ROOT",   -- Net
 	[8142]  = "ROOT",   -- Grasping Vines
 	[8312]  = "ROOT",   -- Trap
@@ -1307,8 +1309,9 @@ Engine.Data.AURA_CC = {
 	[8377]  = "ROOT",   -- Earthgrab
 	[9852]  = "ROOT",   -- Entangling Roots (Rank 5)
 	[9853]  = "ROOT",   -- Entangling Roots (Rank 6)
-	[9915]  = "ROOT",   -- Frost Shock
+	[9915]  = "ROOT",   -- Frost Nova
 	[10017] = "ROOT",   -- Immolate
+	[10230] = "ROOT",   -- Frost Nova (Rank 4)
 	[10852] = "ROOT",   -- Entangling Roots
 	[11264] = "ROOT",   -- Ice Blast
 	[11820] = "ROOT",   -- Electrified Net
@@ -1361,6 +1364,7 @@ Engine.Data.AURA_CC = {
 	[26071] = "ROOT",   -- Entangling Roots
 	[26989] = "ROOT",   -- Entangling Roots
 	[27010] = "ROOT",   -- Entangling Roots (Rank 7)
+	[27088] = "ROOT",   -- Frost Nova (Rank 5)
 	[28858] = "ROOT",   -- Entangling Roots
 	[28991] = "ROOT",   -- Web
 	[29849] = "ROOT",   -- Frost Nova
@@ -1406,6 +1410,7 @@ Engine.Data.AURA_CC = {
 	[40363] = "ROOT",   -- Entangling Roots
 	[40727] = "ROOT",   -- Entangling Roots
 	[41580] = "ROOT",   -- Net
+	[42917] = "ROOT",   -- Frost Nova (Rank 6)
 	[43362] = "ROOT",   -- Entangling Roots
 	[43426] = "ROOT",   -- Frost Nova
 	[44177] = "ROOT",   -- Web Wrap
